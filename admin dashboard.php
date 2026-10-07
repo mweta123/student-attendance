@@ -17,8 +17,6 @@ $total_query = mysqli_query(
 
 $total = mysqli_fetch_assoc($total_query);
 
-
-/* Present Today */
 $present_query = mysqli_query(
     $connection,
     "SELECT COUNT(*) AS total
@@ -69,8 +67,6 @@ $absent = mysqli_fetch_assoc($absent_query);
             background: #f4f7fc;
         }
 
-        /* SIDEBAR */
-
         .sidebar {
             position: fixed;
             width: 200px;
@@ -103,7 +99,6 @@ $absent = mysqli_fetch_assoc($absent_query);
             margin-top: 25px !important;
         }
 
-        /* MAIN */
 
         .main {
             margin-left: 200px;
@@ -187,9 +182,6 @@ $absent = mysqli_fetch_assoc($absent_query);
 
 <body>
 
-
-<!-- SIDEBAR -->
-
 <div class="sidebar">
 
     <h2> Attendance</h2>
@@ -203,6 +195,14 @@ $absent = mysqli_fetch_assoc($absent_query);
         Add Student
     </a>
 
+<a href="delete student.php">
+        delete student
+    </a>
+
+    <a href="edit student.php">
+        edit Student
+    </a>
+
     <a href="attendance.php">
          Attendance
     </a>
@@ -212,9 +212,6 @@ $absent = mysqli_fetch_assoc($absent_query);
     </a>
 
 </div>
-
-
-<!-- MAIN -->
 
 <div class="main">
 
@@ -232,9 +229,6 @@ $absent = mysqli_fetch_assoc($absent_query);
         </p>
 
     </div>
-
-
-    <!-- SUMMARY -->
 
     <div class="cards">
 
